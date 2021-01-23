@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <RootNamespace>ChromelyActions</RootNamespace>
     <Platforms>AnyCPU;x64</Platforms>
+    <PackageId>ChromelyActions</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
