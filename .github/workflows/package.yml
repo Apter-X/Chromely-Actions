@@ -42,7 +42,7 @@ jobs:
       run: copy ChromelyActions/bin/Debug/*.nupkg .
     
     - name: PushNuget
-      run: dotnet nuget push *.nupkg --source https://api.nuget.org/v4/index.json --api-key ${{ secrets.PUBLISH_TO_NUGET_ORG }} --skip-duplicate
+      run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.PUBLISH_TO_NUGET_ORG }} --skip-duplicate
     - name: PushGithub
       run: dotnet nuget push *.nupkg --no-symbols --skip-duplicate
       env:
