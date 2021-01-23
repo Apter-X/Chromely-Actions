@@ -36,10 +36,10 @@ jobs:
         NUGET_AUTH_TOKEN: ${{ github.token }}
     
     - name: Build
-      run: msbuild /t:Pack /p:Configuration=Debug Chromely-Actions/ChromelyActions/ChromelyActions.csproj
+      run: msbuild /t:Pack /p:Configuration=Debug ChromelyActions/ChromelyActions.csproj
     
     - name: Copy
-      run: copy Chromely-Actions/ChromelyActions/bin/Debug/*.nupkg .
+      run: copy ChromelyActions/bin/Debug/*.nupkg .
     
     - name: PushNuget
       run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.PUBLISH_TO_NUGET_ORG }} --skip-duplicate
