@@ -6,6 +6,7 @@
     <RootNamespace>ChromelyActions</RootNamespace>
     <Platforms>AnyCPU;x64</Platforms>
     <PackageId>ChromelyActions</PackageId>
+	<RepositoryUrl>https://github.com/Apter-X/Chromely-Actions</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
