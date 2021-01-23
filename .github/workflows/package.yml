@@ -23,10 +23,11 @@ jobs:
         source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
       env:
         NUGET_AUTH_TOKEN: '%NUGET_AUTH_TOKEN%'
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.1
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     
     - name: Install dependencies
       run: msbuild /t:Restore
